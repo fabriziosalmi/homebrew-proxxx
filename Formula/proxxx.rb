@@ -28,8 +28,10 @@ class Proxxx < Formula
   end
 
   def install
-    # Each tarball extracts to proxxx-<version>-<target>/proxxx.
-    bin.install Dir["proxxx-*/proxxx"].first => "proxxx"
+    # The tarball has a single top-level dir (proxxx-<version>-<target>/),
+    # so Homebrew strips it and extracts us straight into it — the binary
+    # and docs sit at the current level.
+    bin.install "proxxx"
   end
 
   test do

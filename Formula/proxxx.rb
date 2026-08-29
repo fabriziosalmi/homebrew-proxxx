@@ -7,23 +7,23 @@
 class Proxxx < Formula
   desc "Terminal cockpit for Proxmox VE & Proxmox Backup Server"
   homepage "https://fabriziosalmi.github.io/proxxx/"
-  version "0.13.2"
+  version "0.13.3"
   license "MIT"
 
   on_macos do
     # proxxx ships an Apple Silicon binary; Intel Macs run it via Rosetta 2.
     url "https://github.com/fabriziosalmi/proxxx/releases/download/v#{version}/proxxx-#{version}-aarch64-apple-darwin.tar.gz"
-    sha256 "7f5df8092f090e14f3cec655fdb6617b78eaa8d456b049c59a0aa2f6cc5d3aae"
+    sha256 "ce3648ed90e536aca3179ad75ddf09e322f9625c1fcd9425fd2cd2fccf1dc63b"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/fabriziosalmi/proxxx/releases/download/v#{version}/proxxx-#{version}-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "8880c27680df4e5d47998a59a28ed17edc4c19e236b039f9484939805248463b"
+      sha256 "10c9f967cc16f009edb95e715862181042b732608065218896e00b73ce6e62eb"
     end
     on_arm do
       url "https://github.com/fabriziosalmi/proxxx/releases/download/v#{version}/proxxx-#{version}-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "90951e6f8a41c84f54803a609b445cc512d5d86f5ca2a28b24bfff27a36cb096"
+      sha256 "7bc058c6daed7a4429f57f127b7148e98cf6f4ecc3c5de0551622790ddab3bf6"
     end
   end
 
